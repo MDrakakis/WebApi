@@ -3,11 +3,11 @@
 
 ### Installation Process 
 
-1) Download/Fork/Clone the repository 
+1) Download/Fork or Clone the repository.
 ```bash
 git clone https://github.com/MDrakakis/WebApi.git
 ```
-2) You will need these two Nuget Packages 
+2) You will need these two Nuget Packages.
 ``` MongoDB.Bson``` and ``` MongoDB.Driver ``` 
 
 3) Open appsettings.json. Change the following lines to look to your database settings.
@@ -17,3 +17,5 @@ git clone https://github.com/MDrakakis/WebApi.git
     "ConnectionString": "mongodb://localhost:27017",
     "DatabaseName": "UserDB"
 ```
+
+4) Build and Run the app.
