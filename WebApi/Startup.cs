@@ -31,6 +31,15 @@ namespace WebApi
 
       services.AddSingleton<UserService>();
 
+      // CORS Globally
+      services.AddCors
+        (s => s.AddPolicy("CorsPolicy", builder =>
+        {
+          builder.AllowAnyOrigin()
+                 .AllowAnyMethod()
+                 .AllowAnyHeader();
+        }));
+
       services.AddControllers();
     }
 
@@ -41,6 +50,9 @@ namespace WebApi
       {
         app.UseDeveloperExceptionPage();
       }
+
+      // CORS Globally
+      app.UseCors("CorsPolicy");
 
       app.UseHttpsRedirection();
 
